@@ -4,10 +4,10 @@ using Grpc.Net.Client;
 Console.WriteLine("Let's fun with Chuck Norris");
 Console.WriteLine("How much jokes do you want?");
 
-int count = -1;
-while (!int.TryParse(Console.ReadLine(), out count) && count >=0)
+int count = 0;
+while (!int.TryParse(Console.ReadLine(), out count) && count > 0)
 {
-    Console.WriteLine("Sorry, I don't understand. Enter any integer number");
+    Console.WriteLine("Sorry, I don't understand. Enter any integer number greater than 0");
 }
 Console.WriteLine();
 
