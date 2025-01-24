@@ -5,10 +5,12 @@ option csharp_namespace = "ChuckNorris.Service";
 package chucknorris;
 
 service ChuckNorris {
-	rpc ToJoke(EmptyRequest) returns (JokeResponce);
+	rpc ToJoke(JokeCountRequest) returns (stream JokeResponce);
 }
 
-message EmptyRequest { }
+message JokeCountRequest { 
+	int32 count = 1;
+}
 
 message JokeResponce {
 	string value = 1;

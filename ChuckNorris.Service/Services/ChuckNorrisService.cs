@@ -13,15 +13,19 @@ namespace ChuckNorris.Service.Services
             _logger = logger;
         }
 
-        public override async Task<JokeResponce> ToJoke(EmptyRequest request, ServerCallContext context)
+        public override async Task ToJoke(JokeCountRequest request, 
+            IServerStreamWriter<JokeResponce> responseStream, ServerCallContext context)
         {
             try
             {
-                var joke = await _chuckNorrisClient.GetJokeAsync();
-                return new JokeResponce
+                var countJokes = request.Count;
+                for (int i = 1; i <= countJokes; i++)
                 {
-                    Value = joke?.Value 
-                };
+                    var joke = await _chuckNorrisClient.GetJokeAsync();
+                    await responseStream.WriteAsync(new JokeResponce { Value = joke?.Value });
+                    _logger.LogInformation($"Joke #{i} was arrived to client");
+                    await Task.Delay(TimeSpan.FromSeconds(1));
+                }
             }
             catch (Exception ex)
             {
