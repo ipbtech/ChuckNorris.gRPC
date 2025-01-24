@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuckNorris.Service", "ChuckNorris.Service\ChuckNorris.Service.csproj", "{612E70B1-9215-45F7-9B1C-E14518E21476}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuckNorris.Client", "ChuckNorris.Client\ChuckNorris.Client.csproj", "{CAB3A981-8E06-4F61-9DBE-D5A86D06DF03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{612E70B1-9215-45F7-9B1C-E14518E21476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{612E70B1-9215-45F7-9B1C-E14518E21476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{612E70B1-9215-45F7-9B1C-E14518E21476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB3A981-8E06-4F61-9DBE-D5A86D06DF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB3A981-8E06-4F61-9DBE-D5A86D06DF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB3A981-8E06-4F61-9DBE-D5A86D06DF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB3A981-8E06-4F61-9DBE-D5A86D06DF03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
