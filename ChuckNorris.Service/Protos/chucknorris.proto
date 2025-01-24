@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "ChuckNorris.Service";
+
+package chucknorris;
+
+service ChuckNorris {
+	rpc ToJoke(JokeCountRequest) returns (stream JokeResponce);
+}
+
+message JokeCountRequest { 
+	int32 count = 1;
+}
+
+message JokeResponce {
+	string value = 1;
+}
